@@ -1,0 +1,18 @@
+<!--pages/list/list.wxml-->
+<view class="container">
+  <view class="search">
+    <text>搜索</text>
+  </view>
+  <view class="center">
+    <navigator class="items" wx:for="{{shop}}" wx:key="id" url="/pages/detail/detail?item={{item.id}}">
+      <image mode="aspectFill" src="{{item.images[0]}}" class="ab"></image>
+      <view class="message">
+        <text>{{item.name}}</text>
+        <text>电话：{{item.phone}}</text>
+        <text>地址：{{item.address}}</text>
+        <text>营业时间：{{item.businessHours}}</text>
+      </view>
+      <view class="right">{{item.score}}</view>
+    </navigator>
+</view>
+</view>
